@@ -9,7 +9,13 @@ int main()
 	#endif
 
     int x,y,z; cin >> x >> y >> z;
-    // cout << x << " " << y<< " " << z << endl;
-    
+    int arr[3] = {x,y,z};
+    for (int i=0; i<3; i++)
+    {
+    	for (int j = i+1; i < 3; i++)
+    	{
+    		
+    	}
+    }
 	return 0;
 }
