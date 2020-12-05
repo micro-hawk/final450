@@ -10,12 +10,11 @@ int main()
 
     int x,y,z; cin >> x >> y >> z;
     int arr[3] = {x,y,z};
-    for (int i=0; i<3; i++)
-    {
-    	for (int j = i+1; i < 3; i++)
-    	{
-    		
-    	}
-    }
+  	sort(arr, arr+3);
+  	// for(const auto e:arr){
+  	// 	cout << e << " ";
+  	// }
+
+  		cout << "Middle element is: " << arr[1] << endl;
 	return 0;
 }
