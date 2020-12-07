@@ -7,15 +7,40 @@ int main()
 	freopen("output.txt","w", stdout);
 	#endif
 
-	std::vector<int> v; int n; cin >> n;
-	v.reserve(n);
-	for (int i = 0; i < n; ++i)
-		{
-			int input; cin >> input;
-			v.push_back(input);
-		}	sort(v.begin(), v.end());
-	for(const auto e:v){`
-		cout << e << " ";
+	 int n; int temp;
+	 int arr[n];
+	cin >> n;
+	for(int i=0; i<n; i++)
+	{
+		int input; cin >> input;
+		arr[i] = input;
 	}
-	cout << "\n";
+	//printing array
+	for (int i = 0; i < n; ++i)
+	{
+		cout << arr[i] << " " ;
+	}
+	 cout << endl;
+	
+	//sorting - ASCENDING ORDER
+	 int i,j;
+	for(i=0;i<n;i++)
+	{		
+		for(j=i+1;j<n;j++)
+		{
+			if(arr[i]>arr[j])
+			{
+				temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+		}
+	}
+	//printing array
+	
+	for(i=0;i<n;i++)
+		cout<<arr[i]<<"\t";
+	cout<<endl;	
+	
+	return 0;
 }
