@@ -14,7 +14,7 @@ int main()
 			int input; cin >> input;
 			v.push_back(input);
 		}	sort(v.begin(), v.end());
-	for(const auto e:v){
+	for(const auto e:v){`
 		cout << e << " ";
 	}
 	cout << "\n";
