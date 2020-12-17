@@ -2,7 +2,7 @@
 using namespace std; 
 int main() {
 	// INPUT AND OUTPUT files
-	#ifndef ONLINE_JUDGE
+	#ifndef ONLINE_JUDGE 
 	freopen("input.txt", "r", stdin);
 	freopen("output.txt","w", stdout);
 	#endif
@@ -16,21 +16,14 @@ int main() {
 		{
 			cin >> arr[i] ;
 		}
-
-		//Printing Array
-		for(const auto e:arr)
-		{
-			cout << e << " " ;
-		} cout << "\n";
-		
-		cout << arr[0] << " ";
-		//cycling the array
 		int temp;
-		arr[0] = temp;
-		arr[0] = 100;
+		temp = arr[0];
+		arr[0] = arr[n-1] ;
+		arr[n-1] = temp;
 
-		cout << arr[0] << " ";
+		for (int i = 0; i < n; ++i)
+		{
+			cout << arr[i] << " ";
+		} cout << endl;
 	}
-
-	return 0;
-	}
+}
